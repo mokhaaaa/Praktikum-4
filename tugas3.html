@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            /*Mengatur tentang pembuatan persegi*/
+            .persegi {
+                width: 220px;
+                height: 150px;
+                background-color: yellow; 
+            } 
+        </style>
+        <!--Memanggil library jQuery-->
+        <script  src="jquery-3.6.3.min.js">
+        </script>
+        <script type = "text/javascript">
+            // menjalankan fade out kemudian hide ketika klik button dengan id fadeout pada id 1
+            $(document).ready(function(){
+                $('#fadeout').click(function (){
+                $('#1').fadeOut("slow", function(){
+                    $('#1').hide();
+                })
+            })
+            // menjalankan fade in kemudian show ketika klik button dengan id fadein pada id 1
+            $('#fadein').click(function (){
+                $('#1').fadeIn("slow", function(){
+                    $('#1').show();
+                })
+            })
+            // menjalankan fade to 0.3 ketika klik button dengan id fadeto pada id 1
+            $('#fadeto').click(function (){
+                $('#1').fadeTo(1000, 0.3)   
+            })
+        })          
+        </script>
+    </head>
+    <body>
+        <!--menjalankan class persegi dengan id 1-->
+        <div id="1" class="persegi"> </div> 
+        <br>
+        <!--button button dengan id masing masing fadeout, fadein, dan fadeto-->
+        <button id="fadeout">Fade Out</button>
+        <button id="fadein">Fade In</button>
+        <button id="fadeto">Fade to 0.3</button>
+        </div>
+    </body>
+</html>

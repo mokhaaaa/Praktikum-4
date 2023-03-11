@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <!--Memberi judul "Tugas 2"-->
+        <title>Tugas 2</title>
+        <!--Menampilkan teks "Klik 2x pada setiap kotak untuk mengubah warnanya" pada halaman HTML-->
+        <h3>Klik 2x pada setiap kotak untuk mengubah warnanya</h3>
+        <style>
+            /*mengatur tata letak*/
+            .posisi {
+                display: flex;
+            }
+            /*mengatur tentang pembuatan persegi*/
+            .persegi {
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                margin-left: 10px;                
+            }
+            /*latar belakang menjadi warna aqua*/
+            .ubah {
+                background-color: aqua;
+            }
+            /*latar belakang menjadi warna hitam*/
+            .ubah2 {
+                background-color: black;
+            }
+        </style>
+        <!--Memanggil library jQuery-->
+        <script  src="jquery-3.6.3.min.js">
+        </script>
+        <script type = "text/javascript">
+            //menjalankan perubahan warna berdasarkan class ubah ketika double click pada id 1
+            $(document).ready(function(){
+                $('#1').dblclick(function (){
+                $('#1').addClass("ubah")
+            })
+        })
+            //menjalankan perubahan warna berdasarkan class ubah2 ketika double click pada id 2
+            $(document).ready(function(){
+                $('#2').dblclick(function (){
+                $('#2').addClass("ubah2")
+            })
+        })
+            //menjalankan perubahan warna berdasarkan class ubah ketika double click pada id 3
+            $(document).ready(function(){
+                $('#3').dblclick(function (){
+                $('#3').addClass("ubah")
+            })
+        })
+            //menjalankan perubahan warna berdasarkan class ubah2 ketika double click pada id 4
+            $(document).ready(function(){
+                $('#4').dblclick(function (){
+                $('#4').addClass("ubah2")
+            })   
+})           
+        </script>
+    </head>
+    <body>
+        <!--mengatur tata letak sesuai class posisi-->
+        <div class="posisi">
+        <!--menjalankan class persegi dengan id 1, 2, 3, dan 4-->
+        <div id="1" class="persegi"> </div> 
+        <div id="2" class="persegi"> </div> 
+        <div id="3" class="persegi"> </div> 
+        <div id="4" class="persegi"> </div> 
+        </div>
+    </body>
+</html>
